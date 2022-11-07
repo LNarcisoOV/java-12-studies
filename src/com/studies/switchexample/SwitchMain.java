@@ -7,11 +7,11 @@ public class SwitchMain {
 	};
 
 	public static void main(String[] args) {
-		System.out.println(checkWeekDay(WEEK_DAY.FRIDAY));
-		System.out.println(checkWeekDay(WEEK_DAY.SUNDAY));
+		System.out.println(checkWeekDayWithTraditionalSwitch(WEEK_DAY.FRIDAY));
+		System.out.println(checkWeekDayWithTraditionalSwitch(WEEK_DAY.SUNDAY));
 	}
 
-	private static String checkWeekDay(WEEK_DAY day) {
+	private static String checkWeekDayWithTraditionalSwitch(WEEK_DAY day) {
 		switch (day) {
 		case MONDAY:
 		case TUESDAY:
