@@ -32,13 +32,11 @@ public class SwitchMain {
 
 	private static String checkWeekDayWithTraditionalSwitch(WEEK_DAY day) {
 		String output = "";
-		switch (day) {
+		return switch (day) {
 		case MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY -> output = day + " is a week day.";
 		case SATURDAY, SUNDAY -> output = day + " is a weekend day.";
 		default -> output = "Invalid day.";
-		}
-
-		return output;
+		};
 	}
 
 }
