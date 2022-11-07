@@ -9,9 +9,12 @@ public class SwitchMain {
 	public static void main(String[] args) {
 		System.out.println(checkWeekDayWithTraditionalSwitch(WEEK_DAY.FRIDAY));
 		System.out.println(checkWeekDayWithTraditionalSwitch(WEEK_DAY.SUNDAY));
+
+		System.out.println(checkWeekDayWithJava12Switch(WEEK_DAY.TUESDAY));
+		System.out.println(checkWeekDayWithJava12Switch(WEEK_DAY.SATURDAY));
 	}
 
-	private static String checkWeekDayWithTraditionalSwitch(WEEK_DAY day) {
+	private static String checkWeekDayWithJava12Switch(WEEK_DAY day) {
 		switch (day) {
 		case MONDAY:
 		case TUESDAY:
@@ -25,6 +28,17 @@ public class SwitchMain {
 		default:
 			return "Invalid day.";
 		}
+	}
+
+	private static String checkWeekDayWithTraditionalSwitch(WEEK_DAY day) {
+		String output = "";
+		switch (day) {
+		case MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY -> output = day + " is a week day.";
+		case SATURDAY, SUNDAY -> output = day + " is a weekend day.";
+		default -> output = "Invalid day.";
+		}
+
+		return output;
 	}
 
 }
